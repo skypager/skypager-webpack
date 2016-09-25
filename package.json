@@ -1,0 +1,68 @@
+{
+  "name": "skypager-webpack",
+  "version": "5.5.0",
+  "description": "Webpack simplified in a fluent API with presets & an escape hatch so you're not locked in.",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "babel src -d dist",
+    "lint": "eslint example src test",
+    "pretest": "npm run lint && npm run build",
+    "test": "per-env",
+    "test:development": "mocha --watch",
+    "test:test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skypager/skypager.git"
+  },
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "author": "Eric Clemmons <eric@smarterspam.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skypager/skypager/issues"
+  },
+  "homepage": "https://github.com/skypager/skypager#readme",
+  "dependencies": {
+    "babel-loader": "^6.2.5",
+    "babel-preset-skypager": "5.0.4",
+    "bundle-loader": "^0.5.4",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.5.0",
+    "eslint-config-skypager": "5.0.4",
+    "eslint-loader": "^1.5.0",
+    "exports-loader": "^0.6.3",
+    "expose-loader": "^0.7.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "file-loader": "^0.9.0",
+    "friendly-errors-webpack-plugin": "^1.0.3",
+    "html-webpack-plugin": "^2.22.0",
+    "image-webpack-loader": "^2.0.0",
+    "imports-loader": "^0.6.5",
+    "js-yaml": "^3.6.1",
+    "json-loader": "^0.5.4",
+    "null-loader": "^0.1.1",
+    "s3-webpack-plugin": "^0.1.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.1.0-beta.22",
+    "webpack-dev-middleware": "^1.8.1",
+    "webpack-dev-server": "^2.1.0-beta.5",
+    "webpack-hot-middleware": "^2.12.2",
+    "webpack-shell-plugin": "^0.4.3",
+    "webpack-stats-plugin": "^0.1.3",
+    "yaml-loader": "^0.4.0"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.0.2",
+    "per-env": "^1.0.2"
+  }
+}
