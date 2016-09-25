@@ -1,11 +1,15 @@
 {
   "name": "skypager-webpack",
-  "version": "5.5.0",
+  "version": "5.5.1",
   "description": "Webpack simplified in a fluent API with presets & an escape hatch so you're not locked in.",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
+  "bin": {
+    "skypager-webpack": "bin/skypager-webpack",
+    "skypager-webpack-dev-server": "bin/skypager-webpack-dev-server"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "babel src -d dist",
@@ -31,13 +35,9 @@
   "homepage": "https://github.com/skypager/skypager#readme",
   "dependencies": {
     "babel-loader": "^6.2.5",
-    "babel-preset-skypager": "5.0.4",
     "bundle-loader": "^0.5.4",
     "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.25.0",
-    "eslint": "^3.5.0",
-    "eslint-config-skypager": "5.0.4",
-    "eslint-loader": "^1.5.0",
     "exports-loader": "^0.6.3",
     "expose-loader": "^0.7.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
